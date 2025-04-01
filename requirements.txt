@@ -1,0 +1,2 @@
+# primary package - AWS bindings 
+aws-cdk-lib
