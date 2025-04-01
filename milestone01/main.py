@@ -1,7 +1,8 @@
 import sys
 import argparse
-import rich
 from rich.console import Console
+
+import sample_s3
 
 
 def App() -> int:
@@ -9,7 +10,18 @@ def App() -> int:
     args = parser.parse_args()
 
     console.rule(" Homework 01 ")
-    console.print("[bold red]Remainder TODO")
+
+
+
+    # S3 examples , list/create/delete buckets
+    temp_bucket_name = "njashkajhsdkjahdakjsdh" 
+    sample_s3.s3_list_buckets()
+    sample_s3.s3_create_bucket(temp_bucket_name) # name to be globally unique I think?
+    sample_s3.s3_list_buckets()
+    sample_s3.s3_delete_bucket(temp_bucket_name)
+    sample_s3.s3_list_buckets()
+
+
     console.rule(" The END ") 
     return 0
 
@@ -18,11 +30,10 @@ if __name__ == '__main__':
 
     parser = argparse.ArgumentParser(prog="AWS Homework 1",
                                      add_help=True, 
-                                     description="Set by Kapil .....",
+                                     description="AWS learnings .....",
                                      epilog="Author Philip Hill (2025)")
     # All args added one by one here. 
 
-    #TODO this could be any text base information source, eg a document/paper/news article ..?
     parser.add_argument("--test", 
                         default="defaultvaluehere", 
                         required=False, 
