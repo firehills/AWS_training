@@ -11,19 +11,32 @@ pip install --upgrade pip
 python3 -m pip install -r requirements.txt
 ```
 
-# Handy - show installed dependencies
+Handy - show installed pip dependencies
+```
 python3 -m pip freeze
+```
 
+# Setup User
 
-# setup/authrize local user for this app
+Setup a user in the console (IAM). 
+
+For this example assign AdministratorAccess and AmazonS3FullAccess ** DANGEROUS - THIS SHOULD BE MORE RESTRICTIVE ** 
+
+Under IAM->Users->YourUserName->SecurityCredentials set and access key. This is used with "aws configure"
+
+## Access Key aws authentication 
+
+Note - boto3 can make use of this login once complete, alternatively you can supply credentials when creating the boto3.client()
+
+```sh
 aws configure 
-ID eg AKIAUxxxxxxxxxxxxVW3
-Key eg 78xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxf
+ID eg xxxxxxxxxxxxxxxxxxxx
+Key eg xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 region eg us-east-1
-format (none)
+format (none)    # ??? 
 
-aws sts get-caller-identity -> should give you a known user as per above 
-
+aws sts get-caller-identity -> should give you the user details as per above 
+```
 
 
 
@@ -33,7 +46,7 @@ Any language, only pay for compute time used
 
 Conventaion to have lamda entry point with this signature
 
-handler(event, context)
+> handler(event, context)
 
 ## Lambda - Create New App
 
