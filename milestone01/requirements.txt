@@ -1,0 +1,7 @@
+# primary package - AWS bindings 
+aws-cdk-lib
+argparse
+python-dotenv
+rich
+boto3
+
