@@ -9,18 +9,18 @@ def App() -> int:
     console = Console(color_system="auto")
     args = parser.parse_args()
 
-    console.rule(" Homework 01 ")
+    console.rule(" S3 Bucket management by boto3 ")
 
 
 
     # S3 examples , list/create/delete buckets
     temp_bucket_name = "njashkajhsdkjahdakjsdh" 
+
     sample_s3.s3_list_buckets()
     sample_s3.s3_create_bucket(temp_bucket_name) # name to be globally unique I think?
     sample_s3.s3_list_buckets()
     sample_s3.s3_delete_bucket(temp_bucket_name)
     sample_s3.s3_list_buckets()
-
 
     console.rule(" The END ") 
     return 0
