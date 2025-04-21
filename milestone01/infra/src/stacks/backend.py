@@ -14,7 +14,8 @@ _APP_NAME="appname_milestone01"
 
 # this will be different for everyone so
 # make sure to change it
-_SECRET_ID_SUFFIX = "okkwPR"
+##_SECRET_ID_SUFFIX = "okkwPR"
+_SECRET_ID_SUFFIX = "YVJL1I"
 
 class BackendStack(Stack):
     def __init__(self, scope: Construct, construct_id: str, **kwargs) -> None:
