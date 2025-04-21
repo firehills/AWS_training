@@ -1,0 +1,2 @@
+fastapi[standard]
+boto3==1.37.37
