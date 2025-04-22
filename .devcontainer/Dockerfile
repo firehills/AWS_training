@@ -1,6 +1,6 @@
 # See https://mcr.microsoft.com/en-us/artifact/mar/devcontainers/python/about
 # FROM mcr.microsoft.com/devcontainers/python:1-3.12-bullseye
-FROM mcr.microsoft.com/devcontainers/python:3.12-bookworm
+FROM mcr.microsoft.com/devcontainers/python:3.12-bullseye
 ARG USERNAME=vscode
 
 ENV DEBIAN_FRONTEND=noninteractive
