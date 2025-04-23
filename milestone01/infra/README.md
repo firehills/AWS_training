@@ -24,7 +24,12 @@ cdk list
 And to deploy ...
 
 ```sh
-cdk deploy
+cdk deploy --all
 cdk deploy <StackName>
+cdk ls            # list all stacks in the app
+cdk synth <name>  # emits the synthesized CloudFormation template
+cdk deploy        # deploy this stack to your default AWS account/region
+cdk diff          # compare deployed stack with current state
+cdk docs          # open CDK documentation
 ```
 
