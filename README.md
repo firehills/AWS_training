@@ -83,3 +83,13 @@ The stack is under  CloudFormation->Stacks - use Actions to delete.
 
 the lambda functions themselves uder Lambda->Functions - use Actions to delete.
 
+
+## s3 Boto example
+
+Lists, creates deletes S3 buckets with boto3
+
+execute with ...
+```sh
+source .venv/bin/activate
+python3 s3_boto3_example/main.py
+```
